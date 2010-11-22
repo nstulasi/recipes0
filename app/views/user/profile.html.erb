@@ -12,14 +12,13 @@
 <% end %>
 
 <h2>Recipes</h2>
-<dl>
+<table>
 <% @user.recipe.each do |recipe| %>
-  <dt><%= recipe.name %></dt>
-  <dd>
-    <%= recipe.ingredients %><br />
-  </dd>
-  <dd>
-    <%= recipe.directions %><br />
-  </dd>   
+  <tr>
+    <td><%= recipe.name %></td>
+    
+    <td><%= link_to 'View', recipe %></td>
+  </tr>
 <% end %>
-</dl>
+</table>
+

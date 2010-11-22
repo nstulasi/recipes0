@@ -23,7 +23,8 @@
                                             :action => "index" %> |                                           
                                             
         <%= link_to_unless_current "My Profile", :controller => "user",
-                                            :action => "index" %> |                                                                               
+                                            :action => "index" %> | 
+            <a href="/recipes.rss" target="_blank">RSS</a> |                                                                              
         <%= link_to_unless_current "Register", :controller => "user", 
                                                :action => "register" %> | 
         <%= link_to_unless_current "Login",    :controller => "user", 
