@@ -15,15 +15,16 @@
       <div id="nav">
         <%= link_to_unless_current "Home",  :controller => "site", 
                                             :action => "index" %> | 
-             <% if User.logged_in?(session) == true %>                                                                             
+             <% if User.logged_in?(session) == true %>  
+         <%= link_to_unless_current "My Profile", :controller => "user",
+                                            :action => "index" %> |                                                                            
         <%= link_to_unless_current "All Recipes", :controller => "recipes", 
                                             :action => "all_recipes" %> | 
                                                                                        
         <%= link_to_unless_current "My Recipes", :controller => "recipes", 
                                             :action => "index" %> |                                           
                                             
-        <%= link_to_unless_current "My Profile", :controller => "user",
-                                            :action => "index" %> | 
+        
             <a href="/recipes.rss" target="_blank">RSS</a> |  
             <%= link_to_unless_current "Logout",   :controller => "user", 
                                                :action => "logout" %> 
